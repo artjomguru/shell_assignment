@@ -1,0 +1,79 @@
+1.1
+It shows the names of the files inside the chosen folder in my working directory + the data and last activity time
+Get-Alias ls shows the name of the file
+1.2
+-Filter/-Force/-Exclude
+2.1
+C:\UCU\Third-year\Winter Data-analysis\shell_magic>
+Folders and files are in yellow 
+You can distinguish files by the file type
+2.2 sl/cd command was used
+C:\UCU\Third-year\Winter Data-analysis\shell_magic
+3.1 I couldn't create a hello world file because there was spacing between two words in the expression Hello World. However, If I use Hello_world instead, then it works. 
+3.2 Since I used new_world file in the last exercise my powershell didn't allow me to create a folder with the same name. I had to change it to new_world2
+3.3
+I couldn't create an empty file because it already exists
+
+I used rni hello_world.txt
+
+I used this command to move the file into the folder: mv C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\hello_world -Destination C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2
+
+I used this command to move it back: Move-Item -Path C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2\hello_world -Destination  C:\UCU\Third-year\Data-analysis_forLAS\shell_magic
+
+I was stuck on this part because I indicated the file hello_world as a text file. Powershell didn't recognize it until I changed it to just hello_world
+
+sl C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2
+
+3.4
+a) copy creates the same file file and moves it to another folder while move command just removes the object from the origin and move it to another place which becomes its destination
+b) copy -Path C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\hello_world.txt -Destination C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2
+
+c)copy -Path C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\hello_world.txt -Destination C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2\world_hello.txt
+
+3.5 
+a) ri C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\hello_world.txt
+
+
+b) ri C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2\hello_world.txt
+
+c) A positional parameter cannot be found that accepts argument 'C:\UCU\Third-year\Data-analysis_
+forLAS\shell_magic\new_world2'.I think we need to delete the directory instead of the file
+d) ri -Path "C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\new_world2" -Recurse
+
+4.1 The output gives the name of the new txt file. It shows that it's empty and the lenght of the file is zero because it doesn't have any information inside
+
+4.2 echo 'file.txt' > file contents
+echo 'file.txt' >> more contents (I'm not sure how to add the content to the same file, it adds content to another file instead)
+
+4.3 echo 'C:\Users\Artem Obenko\' > home_contents.list
+
+ Get-ChildItem -Recurse
+
+5.1 The `Measure-Object` cmdlet calculates the property values of certain types of object.
+
+Get-Content C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\file | Measure-Object
+
+C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\file| oh -p. This command gives the content of the file instead of counting the number of lines/words
+
+Get-ChildItem | measure
+
+echo '.\hello_world.txt' > hello world
+echo '.\hello_world.txt' > world hello 
+
+5.2 sls -Pattern 'hello'
+
+echo 'C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\worldhello.txt' > world hello
+
+sls -Pattern 'hello'
+
+Get-ChildItem | Select-Object FullName | Select-String .txt
+
+@{FullName=C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\helloworld.txt}
+@{FullName=C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\hello_world.txt}
+@{FullName=C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\shell_assignment.txt}
+@{FullName=C:\UCU\Third-year\Data-analysis_forLAS\shell_magic\top_secret.txt}
+
+
+
+
+
